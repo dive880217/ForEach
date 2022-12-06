@@ -39,5 +39,8 @@ data.forEach((item)=>{
    } else if(item.sex === 'male'){
     set.male+=1 
    }
+   let content = `<li>${item.sex},${item.name},${item.age}</li>`
+   set += content
 })
-console.log(set)
+list.innerHTML = set
+// console.log(set)
