@@ -33,14 +33,18 @@ let set = {
     male : 0,
     female: 0,
 } 
-data.forEach((item)=>{
-   if(item.sex === 'female'  ){
-    set.female+=1 
-   } else if(item.sex === 'male'){
-    set.male+=1 
-   }
-   let content = `<li>${item.sex},${item.name},${item.age}</li>`
-   set += content
-})
-list.innerHTML = set
+// if web updata, data with fn
+function init(){
+    data.forEach((item)=>{
+        if(item.sex === 'female'  ){
+         set.female+=1 
+        } else if(item.sex === 'male'){
+         set.male+=1 
+        }
+        let content = `<li>${item.sex},${item.name},${item.age}</li>`
+        set += content
+     })
+     list.innerHTML = set
+}
+init()
 // console.log(set)
