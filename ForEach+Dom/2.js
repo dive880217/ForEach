@@ -30,18 +30,15 @@ let data = [
   },
 ];
 
-let set = {
-  male: 0,
-  female: 0,
-};
 // if web updata, data with function init()
 function init() {
+let set = '';
   data.forEach((item) => {
-    if (item.sex === "female") {
-      set.female += 1;
-    } else if (item.sex === "male") {
-      set.male += 1;
-    }
+    // if (item.sex === "female") {
+    //   set.female += 1;
+    // } else if (item.sex === "male") {
+    //   set.male += 1;
+    // }
     let content = `<li>${item.sex},${item.name},${item.age}</li>`;
     set += content;
   });
@@ -62,7 +59,41 @@ pickUp.addEventListener("click", function (e) {
       ${item.name},
       age :${item.age}。
       </li>`;
+    }else  if(e.target.value == 'ALL'){
+        str += `<li>
+        ${item.sex},
+        ${item.name},
+        age :${item.age}。
+        </li>`;
     }
+   
+
   });
   list.innerHTML = str;
+//   console.log(str)
 });
+
+//new data input 
+const sex = document.querySelector('.sex')
+const Name = document.querySelector('.Name')
+const age = document.querySelector('.age')
+const btn = document.querySelector('.btn')
+
+btn.addEventListener('click',function(e){
+// console.log(sex.value,Name.value,age.value)
+if(sex.value == '' || Name.value ==
+''||age.value ==''){
+    alert('請重新輸入正確格式')
+    return
+}
+
+let obj = {}
+obj.sex = sex.value
+obj.name = Name.value
+obj.age = age.value
+data.push(obj)
+init()
+console.log(data)
+
+  })
+  console.log(data)
