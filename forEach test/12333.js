@@ -117,11 +117,11 @@
 
 // let data = [1,3,5,7]
 
-// let newData = data.map(function(item){
-//   return item*2
-// })
+let newData = data.map(function(item){
+  return item*2
+})
 
-// console.log(newData)
+console.log(newData)
 
 const ul = document.querySelector(".list");
 console.log(ul);
