@@ -42,7 +42,6 @@
 // // let total1 = 0;
 // data.forEach(function(item, array, ary){
 //   total1+=item.num;
-//   return;
 // })
 // console.log(total1);
 //  function star(i) {
@@ -94,5 +93,19 @@ a[0].setAttribute('class','title')
 a[1].setAttribute('href','https://www.google.com/')
 a[1].setAttribute('class','REE')
 
+// https://livejs-api.hexschool.io/api/livejs/v1/customer/hds5688/products
 
+axios.get('https://ptx.transportdata.tw/MOTC/v2/Tourism/Hotel?%24top=30&%24format=JSON')
+  .then(function (response) {
+    cat1 = response.data;
+ })
+  .catch(function (error) {
+    console.log(error);
+ });
 
+ axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+ .then(function (response) {
+   cat = response.data  
+});
+let cat1 = []
+console.log(cat1)

@@ -9,6 +9,15 @@ signUpBtn.addEventListener("click", function (e) {
   // console.log('aa') success
   SignUpFn();
 });
+
+account.addEventListener('click',function(e){
+    console.log(account)
+    console.log(e.target.type)
+    console.log(e.target.getAttribute('class'))
+
+
+})
+
 function SignUpFn() {
   let obj = {};
   obj.email = account.value;
