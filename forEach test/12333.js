@@ -115,7 +115,7 @@
 // let abc = num1(1,2)
 // console.log(abc)
 
-// let data = [1,3,5,7]
+let data = [1,3,5,7]
 
 let newData = data.map(function(item){
   return item*2
